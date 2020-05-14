@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de inscripcion</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+
+<body>
+    <form action="enviar.php" method="post">
+        <section class="registro">
+            <h4>formulario de registro</h4>
+            <label class='label' for="">nombre</label>
+            <input class="input" type="text" name='nombre' required placeholder="nombre" maxlength="12">
+            <br>
+            <label class='label' for="">cedula</label>
+            <input class="input" type="number" name='cedula' required placeholder="cedula" min="0" >
+            <br>
+            <label class='label' for="">fecha de nacimiento</label>
+            <input class="input" type="date" name="fechaDeNacimiento" placeholder="fecha de nacimiento">
+            <br>
+            <label class='label' for="">e-mail</label>
+            <input class="input" type="email" name='E-mail' placeholder="E-mail">
+            <br>
+            <label class='label' for="">genero: </label>
+            <select class='input' name="genero">
+
+
+                <option class="input">Masculino</option>
+
+                <option class="input">Femenino</option>
+
+                <option class="input">Otro</option>
+
+            </select>
+
+
+            <br>
+            <input id="registrar" type="submit" value="registrar">
+        </section>
+    </form>
+</body>
+
+</html>
