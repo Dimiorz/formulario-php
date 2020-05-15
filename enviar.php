@@ -1,28 +1,28 @@
 <?php
-    $conexion= mysqli_connect('localhost', 'root', '','formulario') or die('error de conexion');
+    $conexion = mysqli_connect("localhost","root","", "formulario");
 
-    $nombre = $_POST['nombres'];
-    $cedula = $_POST['cedula'];
-    $fechaDeNacimiento = $_POST['fechaDeNacimiento'];
-    $email = $_POST['E-mail'];
-    $genero = $_POST['genero'];
+    // if ($conexion) {
+    //   echo "<h1>Conexion exitosa</h1>";
+    // }else {
+    //   echo "<h1>se produjo un error</h1>";
+    // }
 
-    // $sql= "INSERT INTO registro VALUES(null,'".$_POST["nombre"]."','".$_POST["cedula"]."','".$_POST['fechaDeNacimiento']."','".$_POST["E-mail"]."','".$_POST["genero"]."')";
+      $nombre = $_POST["nombre"];
+      $apellido = $_POST["apellido"];
+      $cedula = $_POST["cedula"];
+      $fechaDeNacimiento = $_POST["fechaDeNacimiento"];
+      $email = $_POST["E-mail"];
+      $genero = $_POST["genero"];
+      $notifi = $_POST["notificacion"];
 
-    $sql = ("insert into registro() values(null,'$nombre','$cedula','$fechaDeNacimiento','$email','$genero'");
+      $sql = "INSERT INTO `registro`(`Nombre`, `Apellido`, `Cedula`, `Fecha_nacimiento`, `Email`, `genero`, `notificaciones`)
+       VALUES ('$nombre','$apellido','$cedula','$fechaDeNacimiento','$email','$genero','$notifi')";
+       $query = mysqli_query($conexion,$sql);
 
-     $resultado= mysqli_query($conexion,$sql) or die ('Error en el query');
-     mysqli_close($conexion);
+       if ($query) {
+         echo "<h1>Datos Guardados</h1>";
+       }else {
+         echo "<h1>no se pudieron guardar los datos</h1>";
+       }
 
-     echo 'Nombre: '.$_POST["nombre"].'<br>';
-
-     echo 'cedula: '.$_POST["cedula"].'<br>';
- 
-     echo 'fecha de nacimiento: '.$_POST['fechaDeNacimiento'].'<br>';
- 
-     echo 'E-mail: '.$_POST["E-mail"].'<br>';
- 
-     echo 'Genero: '.$_POST["genero"];
- 
  ?>
-?>
