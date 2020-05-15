@@ -1,7 +1,7 @@
 <?php
     $conexion= mysqli_connect('localhost', 'root', '','formulario') or die('error de conexion');
 
-    $nombre = $_POST['nombre'];
+    $nombre = $_POST['nombres'];
     $cedula = $_POST['cedula'];
     $fechaDeNacimiento = $_POST['fechaDeNacimiento'];
     $email = $_POST['E-mail'];
@@ -9,7 +9,7 @@
 
     // $sql= "INSERT INTO registro VALUES(null,'".$_POST["nombre"]."','".$_POST["cedula"]."','".$_POST['fechaDeNacimiento']."','".$_POST["E-mail"]."','".$_POST["genero"]."')";
 
-    $sql = ("insert into registro() values(null,'$nombre','$cedula','$fechaDeNacimiento','$email','$genero')");
+    $sql = ("insert into registro() values(null,'$nombre','$cedula','$fechaDeNacimiento','$email','$genero'");
 
      $resultado= mysqli_query($conexion,$sql) or die ('Error en el query');
      mysqli_close($conexion);

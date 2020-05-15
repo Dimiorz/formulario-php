@@ -12,8 +12,11 @@
     <form action="enviar.php" method="post">
         <section class="registro">
             <h4>formulario de registro</h4>
-            <label class='label' for="">nombre</label>
-            <input class="input" type="text" name='nombre' required placeholder="nombre" maxlength="12">
+            <label class='label' for="">nombres</label>
+            <input class="input" type="text" name='nombres' required placeholder="nombre">
+            <br>
+            <label class='label' for="">apellidos</label>
+            <input class="input" type="text" name='apellidos' required placeholder="apellidos">
             <br>
             <label class='label' for="">cedula</label>
             <input class="input" type="number" name='cedula' required placeholder="cedula" min="0" >
@@ -35,7 +38,10 @@
                 <option class="input">Otro</option>
 
             </select>
-
+            <label class='label' for="">deseas recibir norificaciones al correo electronico?</label>
+            <br>
+            <input type="radio" name='si' placeholder='si'>si
+            <input type="radio" name='no' placeholder='no'>no
 
             <br>
             <input id="registrar" type="submit" value="registrar">
